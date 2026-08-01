@@ -1,0 +1,39 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "User account profile",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "email": { "type": "string" },
+        "displayName": { "type": "string" },
+        "photoURL": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["uid", "email"]
+    },
+    "JarvisMemory": {
+      "title": "Jarvis Memory",
+      "description": "Persistent memory log for Jarvis AI Android OS",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "key": { "type": "string" },
+        "value": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["userId", "key", "value"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "User profile records"
+    },
+    "/users/{userId}/memories/{memoryId}": {
+      "schema": "JarvisMemory",
+      "description": "User-specific Jarvis OS memories and persistent context"
+    }
+  }
+}

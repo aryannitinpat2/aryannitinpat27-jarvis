@@ -1,0 +1,6 @@
+{
+  "name": "Jarvis Android AI Assistant",
+  "description": "An interactive, high-fidelity simulator of the voice-first Jarvis Android AI Assistant, demonstrating wake-word activation, voice interaction, intent routing, and system integrations using Gemini.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
